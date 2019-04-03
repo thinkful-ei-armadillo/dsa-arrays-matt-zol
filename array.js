@@ -286,9 +286,21 @@ function arr2D(arr){
     return arr;
 }
 
-console.log(arr2D([[1,0,1,1,0],
-                    [0,1,1,1,0],
-                    [1,1,1,1,1],
-                    [1,0,1,1,1],
-                    [1,1,1,1,1]]
-            ));
+// console.log(arr2D([[1,0,1,1,0],
+//                     [0,1,1,1,0],
+//                     [1,1,1,1,1],
+//                     [1,0,1,1,1],
+//                     [1,1,1,1,1]]
+//             ));
+
+/*12. */
+function isRotation(str1, str2){
+   if(str1.length !== str2.length){
+       return false;
+   }
+   let str = str1+str1;
+
+   return str.indexOf(str2) !== -1;
+}
+
+console.log(isRotation('amazon', 'azonam'))
